@@ -42,12 +42,14 @@ void DFS(int node, int parent) { // node = 当前节点, parent = 前一个节�
 }
 
 int main() {
+    // 可视化控制 {
     tracer.log(logger);
     Layout::setRoot(VerticalLayout({tracer, logger}));
     tracer.set(G);
     
     tracer.layoutTree(0);
     Tracer::delay();
+    // }
     DFS(0,0);
     return 0;
 }
